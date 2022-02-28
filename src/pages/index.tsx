@@ -1,7 +1,13 @@
-import React, { FunctionComponent } from 'react'
+// import Layout from '../components/Layout'
+import Layout from 'components/Layout'
+import React from 'react'
 
-const IndexPage: FunctionComponent = () => {
-  return <div>Hello Gatsby</div>
+const Home = () => {
+  return (
+    <Layout>
+      <div>Hello Gatsby</div>
+    </Layout>
+  )
 }
 
-export default IndexPage
+export default Home

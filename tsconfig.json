@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "jsx": "preserve",
-    "module": "commonjs",
-    "rootDir": "./",
+    "module": "ESNext",
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@utils/*": ["./utils/*"],
-      "@hooks/*": ["./hooks/*"]
+      "components/*": ["./components/*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
@@ -21,7 +18,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "isolatedModules": true
   },
   "include": ["src/**/*.tsx"],
   "exclude": ["node_modules"]
