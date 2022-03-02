@@ -4,17 +4,5 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "es5",
-  "printWidth": 100,
-  "importOrder": [
-    "^@(store|modules)/(.*)$",
-    "^@(contexts|hoc)/(.*)$",
-    "^@hooks/(.*)$",
-    "^@constants/?(.*)$",
-    "^@pages/(.*)$",
-    "^@modals/(.*)$",
-    "^@(components|icons)/(.*)$",
-    "^@utils/(.*)$",
-    "^@styles/(.*)$",
-    "^[./]"
-  ]
+  "printWidth": 100
 }
