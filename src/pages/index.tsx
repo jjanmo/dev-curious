@@ -1,15 +1,28 @@
 import styled from '@emotion/styled'
 import GlobalStyles from 'components/Common/GlobalStyle'
+import Footer from 'components/Main/Footer'
 import Header from 'components/Main/Header'
 import React from 'react'
 
-const Container = styled.div``
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+`
+const Main = styled.div`
+  padding-top: 1rem;
+  padding-bottom: 100px;
+`
 
 const Home = () => {
   return (
     <Container>
       <GlobalStyles />
       <Header />
+      <Main></Main>
+      <Footer />
     </Container>
   )
 }
