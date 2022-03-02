@@ -1,12 +1,16 @@
-// import Layout from '../components/Layout'
-import Layout from 'components/Layout'
+import styled from '@emotion/styled'
+import GlobalStyles from 'components/Common/GlobalStyle'
+import Header from 'components/Main/Header'
 import React from 'react'
+
+const Container = styled.div``
 
 const Home = () => {
   return (
-    <Layout>
-      <div>Hello Gatsby</div>
-    </Layout>
+    <Container>
+      <GlobalStyles />
+      <Header />
+    </Container>
   )
 }
 
