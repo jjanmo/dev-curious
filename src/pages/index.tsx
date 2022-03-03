@@ -3,6 +3,7 @@ import GlobalStyles from 'components/Common/GlobalStyle'
 import CategoryList from 'components/Main/CategoryList'
 import Footer from 'components/Main/Footer'
 import Header from 'components/Main/Header'
+import PostList from 'components/Main/PostList'
 import React from 'react'
 
 const Container = styled.div`
@@ -26,6 +27,7 @@ const Home = () => {
       <Header />
       <Main>
         <CategoryList />
+        <PostList />
       </Main>
       <Footer />
     </Container>
