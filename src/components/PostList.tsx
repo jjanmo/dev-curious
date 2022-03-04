@@ -36,6 +36,38 @@ const postList = [
     overview:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut amet vero atque vel maiores tempora facere commodi, officiis fugit magni labore qui cupiditate ipsa earum? Officia tempore esse ipsa.',
   },
+  {
+    id: 4,
+    title: 'Post Item 4',
+    categories: ['nextjs', 'react'],
+    date: '2022.03.04',
+    overview:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut amet vero atque vel maiores tempora facere commodi, officiis fugit magni labore qui cupiditate ipsa earum? Officia tempore esse ipsa.',
+  },
+  {
+    id: 4,
+    title: 'Post Item 4',
+    categories: ['nextjs', 'react'],
+    date: '2022.03.04',
+    overview:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut amet vero atque vel maiores tempora facere commodi, officiis fugit magni labore qui cupiditate ipsa earum? Officia tempore esse ipsa.',
+  },
+  {
+    id: 4,
+    title: 'Post Item 4',
+    categories: ['nextjs', 'react'],
+    date: '2022.03.04',
+    overview:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut amet vero atque vel maiores tempora facere commodi, officiis fugit magni labore qui cupiditate ipsa earum? Officia tempore esse ipsa.',
+  },
+  {
+    id: 4,
+    title: 'Post Item 4',
+    categories: ['nextjs', 'react'],
+    date: '2022.03.04',
+    overview:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ut amet vero atque vel maiores tempora facere commodi, officiis fugit magni labore qui cupiditate ipsa earum? Officia tempore esse ipsa.',
+  },
 ]
 
 const Container = styled.div`
