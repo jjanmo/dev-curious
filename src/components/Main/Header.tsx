@@ -9,15 +9,15 @@ const Container = styled.div`
   align-items: center;
   background-color: #0a91aa;
 `
-const Intro = styled.p`
+const Intro = styled.div`
   padding: 1rem 0 3rem;
   color: white;
   line-height: 1.5;
 
-  & > div:first-child {
+  & > div:first-of-type {
     font-size: 1.5rem;
   }
-  & > div:last-child {
+  & > div:last-of-type {
     font-size: 2rem;
     font-weight: bold;
   }
