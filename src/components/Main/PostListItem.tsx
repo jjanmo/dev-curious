@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 type Props = {
   title: string
   categories: string[]
-  image: string
+  image?: string
   date: string
   overview: string
 }
@@ -22,10 +23,6 @@ const Container = styled.li`
   &:hover {
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
   }
-`
-const Thumbnail = styled.img`
-  width: 100%;
-  height: 200px;
 `
 const Title = styled.h1`
   margin: 10px 0;
@@ -51,10 +48,10 @@ const Overview = styled.p`
   font-size: 1.1rem;
 `
 
-const PostListItem = ({ title, categories, image, date, overview }: Props) => {
+const PostListItem = ({ title, categories, date, overview }: Props) => {
   return (
     <Container>
-      <Thumbnail src={image} />
+      <StaticImage src="../../assets/thumbnail.png" height={200} alt="thumbnail" />
       <Title>{title}</Title>
       <Date>{date}</Date>
       <CategoryWrapper>
