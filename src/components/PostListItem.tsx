@@ -51,7 +51,7 @@ const Overview = styled.p`
 const PostListItem = ({ title, categories, date, overview }: Props) => {
   return (
     <Container>
-      <StaticImage src="../../assets/thumbnail.png" height={200} alt="thumbnail" />
+      <StaticImage src="../assets/thumbnail.png" height={200} alt="thumbnail" />
       <Title>{title}</Title>
       <Date>{date}</Date>
       <CategoryWrapper>

@@ -9,7 +9,7 @@ import GlobalStyles from 'styles/GlobalStyle'
 const Container = styled.div``
 const Main = styled.div`
   width: 100%;
-  max-width: 80rem;
+  max-width: 60rem;
   padding-top: 5rem;
   margin: auto;
 `
@@ -23,7 +23,7 @@ const Home = () => {
         <CategoryList />
         <PostList />
       </Main>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   )
 }
