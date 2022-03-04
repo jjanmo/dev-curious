@@ -5,7 +5,10 @@
     "module": "ESNext",
     "baseUrl": "./src",
     "paths": {
-      "components/*": ["./components/*"]
+      "components/*": ["./components/*"],
+      "constants/*": ["./constants/*"],
+      "assets/*": ["./assets/*"],
+      "styles/*": ["./styles/*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
