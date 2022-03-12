@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `contents`,
-        path: `${__dirname}/contents`,
+        path: path.join(__dirname, `contents`),
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -36,35 +36,42 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
     {
-      resolve: 'gatsby-remark-smartypants',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        dashes: 'oldschool',
-      },
-    },
-    {
-      resolve: 'gatsby-remark-prismjs',
-      options: {
-        classPrefix: 'language-',
-      },
-    },
-    {
-      resolve: 'gatsby-remark-images',
-      options: {
-        maxWidth: 1200,
-        quality: 100,
-        withWebp: true,
-        linkImagesToOriginal: false,
-      },
-    },
-    {
-      resolve: 'gatsby-remark-copy-linked-files',
-      options: {},
-    },
-    {
-      resolve: 'gatsby-remark-external-links',
-      options: {
-        target: '_blank',
-        rel: 'nofollow',
+        plugins: [
+          {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              dashes: 'oldschool',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1200,
+              quality: 100,
+              withWebp: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
+            },
+          },
+        ],
       },
     },
   ],
