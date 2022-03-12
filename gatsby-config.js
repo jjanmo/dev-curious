@@ -2,10 +2,10 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Dev Curious Note`,
+    description: `This is just blog about sharing questions about programming 💻`,
+    author: `@jjanmo`,
+    siteUrl: `https://devcrs.tk`,
   },
   plugins: [
     {
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `assets`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contents`,
+        path: `${__dirname}/contents`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -43,9 +50,10 @@ module.exports = {
     {
       resolve: 'gatsby-remark-images',
       options: {
-        maxWidth: 768,
+        maxWidth: 1200,
         quality: 100,
         withWebp: true,
+        linkImagesToOriginal: false,
       },
     },
     {

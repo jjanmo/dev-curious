@@ -1,13 +1,51 @@
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import React from 'react'
 
-const About = () => {
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+        description: string
+        author: string
+        siteUrl: string
+      }
+    }
+  }
+}
+
+const About = ({
+  data: {
+    site: {
+      siteMetadata: { title, description, author, siteUrl },
+    },
+  },
+}: Props) => {
   return (
     <>
       <div>This is About page</div>
-      <Link to="/">To Home</Link>
+      <section>
+        <div>{title}</div>
+        <div>{description}</div>
+        <div>{author}</div>
+      </section>
+
+      <Link to={`${process.env.NODE_ENV === 'development' ? '/' : siteUrl}`}>To Home</Link>
     </>
   )
 }
 
 export default About
+
+export const metadataQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        siteUrl
+      }
+    }
+  }
+`
