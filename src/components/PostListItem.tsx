@@ -1,14 +1,8 @@
 import styled from '@emotion/styled'
-import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
-
-type Props = {
-  title: string
-  categories?: string[]
-  image?: string
-  date?: string
-  overview?: string
-}
+import { PostType } from 'types/posts'
 
 const Container = styled.li`
   width: 100%;
@@ -16,6 +10,7 @@ const Container = styled.li`
   flex-direction: column;
   list-style: none;
   padding: 20px;
+  margin: 1rem 0;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -24,6 +19,11 @@ const Container = styled.li`
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
   }
 `
+const Thumbnail = styled(GatsbyImage)`
+  width: 100%;
+  height: 200px;
+`
+
 const Title = styled.h1`
   margin: 10px 0;
 `
@@ -48,20 +48,34 @@ const Overview = styled.p`
   font-size: 1.1rem;
 `
 
-const PostListItem = ({ title }: Props) => {
+const PostListItem = ({
+  node: {
+    id,
+    frontmatter: {
+      title,
+      categories,
+      date,
+      summary,
+      thumbnail: {
+        childImageSharp: { gatsbyImageData },
+      },
+    },
+  },
+}: PostType) => {
   return (
-    <Container>
-      <div>{title}</div>
-      {/* <StaticImage src="../assets/thumbnail.png" height={200} alt="thumbnail" />
-      <Title>{title}</Title>
-      <Date>{date}</Date>
-      <CategoryWrapper>
-        {categories.map((category, index) => (
-          <div key={index}>{category.toUpperCase()}</div>
-        ))}
-      </CategoryWrapper>
-      <Overview>{`${overview.slice(0, 150)}...`}</Overview> */}
-    </Container>
+    <Link to={`/post/${id}`}>
+      <Container>
+        <Thumbnail image={gatsbyImageData} alt="thumbnail image" />
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        <CategoryWrapper>
+          {categories?.map((category, index) => (
+            <div key={index}>{category.toUpperCase()}</div>
+          ))}
+        </CategoryWrapper>
+        <Overview>{`${summary?.slice(0, 150)}...`}</Overview>
+      </Container>
+    </Link>
   )
 }
 

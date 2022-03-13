@@ -5,20 +5,19 @@ import React from 'react'
 
 const Container = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem 0;
 `
 
 const PostList = () => {
-  const posts = useQueryPosts()
+  const postList = useQueryPosts()
 
   return (
     <Container>
-      {posts.map(post => (
-        <PostListItem key={post.node.id} title={post.node.frontmatter.title} />
+      {postList.map(post => (
+        <PostListItem key={post.node.id} {...post} />
       ))}
     </Container>
   )

@@ -4,12 +4,12 @@ import styled from '@emotion/styled'
 const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 2rem;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
 `
 
+// dummy
 const categoryList = {
   all: 5,
   react: 3,
