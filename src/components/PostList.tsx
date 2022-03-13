@@ -1,6 +1,6 @@
 import PostListItem from './PostListItem'
 import styled from '@emotion/styled'
-import { postList } from 'constants/dummy'
+import useQueryPosts from 'hooks/useQueryPosts'
 import React from 'react'
 
 const Container = styled.div`
@@ -13,10 +13,12 @@ const Container = styled.div`
 `
 
 const PostList = () => {
+  const posts = useQueryPosts()
+
   return (
     <Container>
-      {postList.map(item => (
-        <PostListItem key={item.id} {...item} />
+      {posts.map(post => (
+        <PostListItem key={post.node.id} title={post.node.frontmatter.title} />
       ))}
     </Container>
   )

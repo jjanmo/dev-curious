@@ -20,7 +20,7 @@ const Home = () => {
       <GlobalStyles />
       <Header />
       <Main>
-        <CategoryList />
+        {/* <CategoryList /> */}
         <PostList />
       </Main>
       {/* <Footer /> */}

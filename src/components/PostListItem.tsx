@@ -4,10 +4,10 @@ import React from 'react'
 
 type Props = {
   title: string
-  categories: string[]
+  categories?: string[]
   image?: string
-  date: string
-  overview: string
+  date?: string
+  overview?: string
 }
 
 const Container = styled.li`
@@ -48,10 +48,11 @@ const Overview = styled.p`
   font-size: 1.1rem;
 `
 
-const PostListItem = ({ title, categories, date, overview }: Props) => {
+const PostListItem = ({ title }: Props) => {
   return (
     <Container>
-      <StaticImage src="../assets/thumbnail.png" height={200} alt="thumbnail" />
+      <div>{title}</div>
+      {/* <StaticImage src="../assets/thumbnail.png" height={200} alt="thumbnail" />
       <Title>{title}</Title>
       <Date>{date}</Date>
       <CategoryWrapper>
@@ -59,7 +60,7 @@ const PostListItem = ({ title, categories, date, overview }: Props) => {
           <div key={index}>{category.toUpperCase()}</div>
         ))}
       </CategoryWrapper>
-      <Overview>{`${overview.slice(0, 150)}...`}</Overview>
+      <Overview>{`${overview.slice(0, 150)}...`}</Overview> */}
     </Container>
   )
 }
