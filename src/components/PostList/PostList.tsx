@@ -13,10 +13,11 @@ const Container = styled.div`
 
 const PostList = () => {
   const postList = useQueryPosts()
+  const newPostList = [...postList, ...postList, ...postList] // tmp data
 
   return (
     <Container>
-      {postList.map(post => (
+      {newPostList.map(post => (
         <PostListItem key={post.node.id} {...post} />
       ))}
     </Container>

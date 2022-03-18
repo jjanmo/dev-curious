@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import CategoryList from 'components/CategoryList'
-import Footer from 'components/Footer'
 import Header from 'components/Header'
 import PostList from 'components/PostList'
 import React from 'react'
@@ -30,7 +29,6 @@ const Home = () => {
 
         <PostList />
       </Main>
-      {/* <Footer /> */}
     </Container>
   )
 }
