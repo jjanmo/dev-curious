@@ -1,26 +1,19 @@
 import PostListItem from './PostListItem'
-import styled from '@emotion/styled'
-import useQueryPosts from 'hooks/useQueryPosts'
+import * as S from './styles.list'
 import React from 'react'
+import { PostType } from 'types/posts'
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 2rem 0;
-`
+interface Props {
+  posts: PostType[]
+}
 
-const PostList = () => {
-  const postList = useQueryPosts()
-  const newPostList = [...postList, ...postList, ...postList] // tmp data
-
+const PostList = ({ posts }: Props) => {
   return (
-    <Container>
-      {newPostList.map(post => (
-        <PostListItem key={post.node.id} {...post} />
+    <S.Container>
+      {posts.map((post: PostType) => (
+        <PostListItem key={post.id} {...post} />
       ))}
-    </Container>
+    </S.Container>
   )
 }
 

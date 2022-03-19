@@ -9,7 +9,7 @@ export const Container = styled.header<{ isScrolling: boolean }>`
   width: 100%;
   height: ${({ isScrolling }) => (isScrolling ? '7.5rem' : '5rem')};
 
-  background-color: ${COLORS.MAIN_BLUE};
+  background-color: ${COLORS.PURPLE_01};
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 
   display: flex;
@@ -29,13 +29,13 @@ export const Logo = styled.div<{ isScrolling: boolean }>`
     position: absolute;
     top: ${({ isScrolling }) => (isScrolling ? '50px' : '0px')};
     left: -40px;
-    color: ${COLORS.MAIN_YELLOW};
+    color: ${COLORS.YELLOW_01};
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     transition: all 0.4s ease-in-out;
   }
   & > div:last-of-type {
-    color: ${COLORS.SUB_YELLOW};
+    color: ${COLORS.YELLOW_02};
     font-family: 'Hubballi', cursive;
     font-size: 3rem;
   }

@@ -1,6 +1,6 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-export interface PostType {
+export interface RawPostType {
   node: {
     id: string
     frontmatter: {
@@ -15,4 +15,21 @@ export interface PostType {
       }
     }
   }
+}
+
+export interface PostType {
+  id: string
+  title: string
+  summary: string
+  date: string
+  categories: string[]
+  thumbnail: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
+}
+
+export interface Categories {
+  [key: string]: number
 }

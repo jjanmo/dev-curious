@@ -1,29 +1,19 @@
 import CategoryItem from './CategoryItem'
-import styled from '@emotion/styled'
+import * as S from './styles.list'
+import { Categories } from 'types/posts'
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 2rem;
-  margin: 2rem 0;
-`
-
-// dummy
-const categoryList = {
-  all: 5,
-  react: 3,
-  javascript: 1,
-  nextjs: 3,
+interface Props {
+  categories: Categories
 }
 
-const CategoryList = () => {
+const CategoryList = ({ categories }: Props) => {
   return (
-    <Container>
-      {Object.entries(categoryList).map(([key, value]) => (
-        <CategoryItem key={key} text={key} count={value} />
+    <S.Container>
+      <S.Title>Tags</S.Title>
+      {Object.entries(categories).map(([key, value]) => (
+        <CategoryItem key={key} name={key} count={value} />
       ))}
-    </Container>
+    </S.Container>
   )
 }
 
