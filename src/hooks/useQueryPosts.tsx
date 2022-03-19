@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { Categories, PostType, RawPostType } from 'types/posts'
+import { PostType, QueryPostsReturnType, QueryPostsType, RawPostType } from 'types/posts'
 
-const useQueryPosts = () => {
+const useQueryPosts = (): QueryPostsReturnType => {
   const {
     allMarkdownRemark: { edges },
-  } = useStaticQuery(
+  } = useStaticQuery<QueryPostsType>(
     graphql`
       query getPosts {
         allMarkdownRemark(
@@ -31,7 +31,7 @@ const useQueryPosts = () => {
     `
   )
 
-  const categories: Categories = edges
+  const categories: { [key: string]: number } = edges
     .reduce((acc: string[], cur: RawPostType) => {
       return [...acc, ...cur.node.frontmatter.categories]
     }, [])
@@ -44,14 +44,17 @@ const useQueryPosts = () => {
         return acc
       }
     }, {})
+
   categories['All'] = edges.length
+
+  const sortedCategories: [string, number][] = Object.entries(categories).sort()
 
   const posts: PostType[] = edges.map((item: RawPostType) => ({
     id: item.node.id,
     ...item.node.frontmatter,
   }))
 
-  return { posts, categories }
+  return { posts, categories: sortedCategories }
 }
 
 export default useQueryPosts

@@ -1,17 +1,16 @@
 import CategoryItem from './CategoryItem'
 import * as S from './styles.list'
-import { Categories } from 'types/posts'
 
 interface Props {
-  categories: Categories
+  categories: [string, number][]
 }
 
 const CategoryList = ({ categories }: Props) => {
   return (
     <S.Container>
       <S.Title>Tags</S.Title>
-      {Object.entries(categories).map(([key, value]) => (
-        <CategoryItem key={key} name={key} count={value} />
+      {categories.map(([category, count]) => (
+        <CategoryItem key={category} name={category} count={count} />
       ))}
     </S.Container>
   )

@@ -30,6 +30,13 @@ export interface PostType {
   }
 }
 
-export interface Categories {
-  [key: string]: number
+export interface QueryPostsType {
+  allMarkdownRemark: {
+    edges: RawPostType[]
+  }
+}
+
+export interface QueryPostsReturnType {
+  posts: PostType[]
+  categories: [string, number][]
 }
