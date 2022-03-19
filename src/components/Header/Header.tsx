@@ -1,5 +1,6 @@
 import { Container, Logo } from './styles'
 import Nav from 'components/Nav'
+import SearchForm from 'components/SearchForm'
 import { Link } from 'gatsby'
 import { useEffect, useState } from 'react'
 
@@ -27,9 +28,7 @@ const Header = () => {
         </Logo>
       </Link>
       <Nav />
-      <div>
-        <input />
-      </div>
+      <SearchForm />
       <div>
         <input type="radio" />
         <input type="radio" />
