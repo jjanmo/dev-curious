@@ -1,5 +1,5 @@
-import { COLORS } from 'constants/colors'
 import styled from '@emotion/styled'
+import { COLORS } from 'constants/colors'
 
 export const Container = styled.div`
   width: 100%;
@@ -7,6 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 1rem 2rem;
   margin: 2rem 0;
+`
+export const SubContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
 `
 
 export const Title = styled.div`

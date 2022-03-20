@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 import { COLORS } from 'constants/colors'
 
-export const Container = styled.button<{ isActive: boolean }>`
+export const Container = styled.li<{ isActive: boolean }>`
   all: unset;
   font-size: 1rem;
   font-weight: ${({ isActive }) => (isActive ? 'bold' : 400)};
   width: 100%;
   height: 2.5rem;
   padding-left: 10px;
-  margin: 0.2rem 0;
+  margin: 0.1rem 0;
   border-radius: 0.5rem;
   color: ${COLORS.BLUE_01};
   cursor: pointer;
@@ -34,5 +34,5 @@ export const Container = styled.button<{ isActive: boolean }>`
     height: 2px;
     background-color: ${COLORS.BLUE_01};
     transition: 0.3s;
-  }tk
+  }
 `

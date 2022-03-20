@@ -2,9 +2,12 @@ import styled from '@emotion/styled'
 import CategoryList from 'components/CategoryList'
 import Header from 'components/Header'
 import PostList from 'components/PostList'
+import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
 import { useQueryPosts } from 'hooks'
-import React from 'react'
+import queryString, { ParsedQuery } from 'query-string'
+import React, { useContext, useMemo, useState } from 'react'
 import GlobalStyles from 'styles/GlobalStyle'
+import { PostType } from 'types/posts'
 
 const Container = styled.div`
   min-height: 100vh;
@@ -19,18 +22,23 @@ const Main = styled.div`
   padding-top: 5rem;
   margin: auto;
 `
+interface Props {
+  location: {
+    search: string
+  }
+}
 
-const Home = () => {
-  const { posts, categories } = useQueryPosts()
-
+const Home = ({ location: { search } }: Props) => {
   return (
     <Container>
       <GlobalStyles />
       <Header />
-      <Main>
-        <CategoryList categories={categories} />
-        <PostList posts={posts} />
-      </Main>
+      <PostsSortingContextProvider search={search}>
+        <Main>
+          <CategoryList />
+          <PostList />
+        </Main>
+      </PostsSortingContextProvider>
     </Container>
   )
 }

@@ -1,13 +1,12 @@
 import PostListItem from './PostListItem'
 import * as S from './styles.list'
-import React from 'react'
+import { PostsSortingContext } from 'contexts/PostsSortingContext'
+import React, { useContext } from 'react'
 import { PostType } from 'types/posts'
 
-interface Props {
-  posts: PostType[]
-}
+const PostList = () => {
+  const { posts } = useContext(PostsSortingContext)
 
-const PostList = ({ posts }: Props) => {
   return (
     <S.Container>
       {posts.map((post: PostType) => (

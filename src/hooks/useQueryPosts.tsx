@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
+import { useMemo } from 'react'
 import { PostType, QueryPostsReturnType, QueryPostsType, RawPostType } from 'types/posts'
 
 const useQueryPosts = (): QueryPostsReturnType => {
@@ -31,28 +32,39 @@ const useQueryPosts = (): QueryPostsReturnType => {
     `
   )
 
-  const categories: { [key: string]: number } = edges
-    .reduce((acc: string[], cur: RawPostType) => {
-      return [...acc, ...cur.node.frontmatter.categories]
-    }, [])
-    .reduce((acc: { [key: string]: number }, category: string) => {
-      if (acc[category]) {
-        acc[category]++
-        return acc
-      } else {
-        acc[category] = 1
-        return acc
-      }
-    }, {})
+  const categories: { [key: string]: number } = useMemo(
+    () =>
+      edges
+        .reduce((acc: string[], cur: RawPostType) => {
+          return [...acc, ...cur.node.frontmatter.categories]
+        }, [])
+        .reduce((acc: { [key: string]: number }, category: string) => {
+          if (acc[category]) {
+            acc[category]++
+            return acc
+          } else {
+            acc[category] = 1
+            return acc
+          }
+        }, {}),
+    [edges]
+  )
 
   categories['all'] = edges.length
 
-  const sortedCategories: [string, number][] = Object.entries(categories).sort()
+  const sortedCategories: [string, number][] = useMemo(
+    () => Object.entries(categories).sort(),
+    [categories]
+  )
 
-  const posts: PostType[] = edges.map((item: RawPostType) => ({
-    id: item.node.id,
-    ...item.node.frontmatter,
-  }))
+  const posts: PostType[] = useMemo(
+    () =>
+      edges.map((item: RawPostType) => ({
+        id: item.node.id,
+        ...item.node.frontmatter,
+      })),
+    [edges]
+  )
 
   return { posts, categories: sortedCategories }
 }

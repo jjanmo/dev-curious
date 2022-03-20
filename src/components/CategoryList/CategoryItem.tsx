@@ -5,16 +5,13 @@ import React from 'react'
 type CategoryItemProps = {
   name: string
   count: number
-  onClick: (e: Event) => void
   isActive: boolean
 }
 
-const CategoryItem = ({ name, count, onClick, isActive }: CategoryItemProps) => {
+const CategoryItem = ({ name, count, isActive }: CategoryItemProps) => {
   return (
-    <S.Container onClick={onClick} isActive={isActive}>
-      <Link to={`/?category=${name}`} data-category={name}>
-        {`#${name.toUpperCase()}(${count})`}
-      </Link>
+    <S.Container isActive={isActive}>
+      <Link to={`/?category=${name}`}>{`#${name.toUpperCase()}(${count})`}</Link>
     </S.Container>
   )
 }
