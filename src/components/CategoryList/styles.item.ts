@@ -6,7 +6,8 @@ export const Container = styled.button<{ isActive: boolean }>`
   font-size: 1rem;
   font-weight: ${({ isActive }) => (isActive ? 'bold' : 400)};
   width: 100%;
-  padding: 0.5rem;
+  height: 2.5rem;
+  padding-left: 10px;
   margin: 0.2rem 0;
   border-radius: 0.5rem;
   color: ${COLORS.BLUE_01};
@@ -16,4 +17,22 @@ export const Container = styled.button<{ isActive: boolean }>`
   &:hover {
     background-color: rgba(10, 145, 170, 0.2);
   }
+
+  & > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  & > a::before {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    content: '';
+    width: ${({ isActive }) => (isActive ? '60%' : 0)};
+    height: 2px;
+    background-color: ${COLORS.BLUE_01};
+    transition: 0.3s;
+  }tk
 `

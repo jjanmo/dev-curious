@@ -1,22 +1,20 @@
 import * as S from './styles.item'
 import { Link } from 'gatsby'
-import React, { useState } from 'react'
+import React from 'react'
 
 type CategoryItemProps = {
   name: string
   count: number
+  onClick: (e: Event) => void
+  isActive: boolean
 }
 
-const CategoryItem = ({ name, count }: CategoryItemProps) => {
-  const [isActive, setIsActive] = useState(false)
-
-  const onClickToggle = () => {
-    setIsActive(!isActive)
-  }
-
+const CategoryItem = ({ name, count, onClick, isActive }: CategoryItemProps) => {
   return (
-    <S.Container onClick={onClickToggle} isActive={isActive}>
-      <Link to={`/?category=${name}`}>{`#${name.toUpperCase()}(${count})`}</Link>
+    <S.Container onClick={onClick} isActive={isActive}>
+      <Link to={`/?category=${name}`} data-category={name}>
+        {`#${name.toUpperCase()}(${count})`}
+      </Link>
     </S.Container>
   )
 }

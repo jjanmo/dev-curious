@@ -45,7 +45,7 @@ const useQueryPosts = (): QueryPostsReturnType => {
       }
     }, {})
 
-  categories['All'] = edges.length
+  categories['all'] = edges.length
 
   const sortedCategories: [string, number][] = Object.entries(categories).sort()
 
