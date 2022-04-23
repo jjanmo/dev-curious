@@ -3,6 +3,9 @@ import { IGatsbyImageData } from 'gatsby-plugin-image'
 export interface RawPostType {
   node: {
     id: string
+    fields: {
+      slug: string
+    }
     frontmatter: {
       title: string
       summary: string
@@ -20,6 +23,7 @@ export interface RawPostType {
 export interface PostType {
   id: string
   title: string
+  slug: string
   summary: string
   date: string
   categories: string[]

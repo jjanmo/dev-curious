@@ -4,8 +4,9 @@ import React from 'react'
 import { PostType } from 'types/posts'
 
 const PostListItem = ({
-  id,
+  // id,
   title,
+  slug,
   categories,
   date,
   summary,
@@ -14,7 +15,7 @@ const PostListItem = ({
   },
 }: PostType) => {
   return (
-    <Link to={`/post/${id}`}>
+    <Link to={`/post${slug}`}>
       <S.Container>
         <S.Thumbnail image={gatsbyImageData} alt="thumbnail image" />
         <S.Title>{title}</S.Title>

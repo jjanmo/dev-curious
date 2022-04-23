@@ -14,6 +14,9 @@ const useQueryPosts = (): QueryPostsReturnType => {
           edges {
             node {
               id
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 summary
@@ -61,10 +64,13 @@ const useQueryPosts = (): QueryPostsReturnType => {
     () =>
       edges.map((item: RawPostType) => ({
         id: item.node.id,
+        slug: item.node.fields.slug,
         ...item.node.frontmatter,
       })),
     [edges]
   )
+
+  console.log(posts)
 
   return { posts, categories: sortedCategories }
 }
