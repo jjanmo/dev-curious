@@ -1,4 +1,4 @@
-import CategoryItem from './CategoryItem'
+import CategoryItem from './Category.Item'
 import * as S from './styles.list'
 import { PostsSortingContext } from 'contexts/PostsSortingContext'
 import { useContext } from 'react'
