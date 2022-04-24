@@ -1,14 +1,54 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  createPage({
-    path: '/using-dsg',
-    component: require.resolve('./src/templates/using-dsg.js'),
-    context: {},
-    defer: true,
-  })
+
+  // Import Post Template Component
+  const PostTemplateComponent = path.resolve('./src/templates/post_template.tsx')
+
+  // Get All Markdown File For Paging
+  const queryAllMarkdownData = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (queryAllMarkdownData.errors) {
+    reporter.panicOnBuild(`Error while running query`)
+    return
+  }
+
+  // Page Generating Function
+  const generatePostPage = ({
+    node: {
+      fields: { slug },
+    },
+  }) => {
+    console.log('🙏', slug)
+    const pageOptions = {
+      path: `post${slug}`,
+      component: PostTemplateComponent,
+      context: { slug },
+    }
+
+    createPage(pageOptions)
+  }
+
+  // Generate Post Page And Passing Slug Props for Query
+  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage)
 }
 
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {

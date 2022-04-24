@@ -1,4 +1,4 @@
-import PostListItem from './PostListItem'
+import Post from './PostList.Item'
 import * as S from './styles.list'
 import { PostsSortingContext } from 'contexts/PostsSortingContext'
 import React, { useContext } from 'react'
@@ -10,7 +10,7 @@ const PostList = () => {
   return (
     <S.Container>
       {posts.map((post: PostType) => (
-        <PostListItem key={post.id} {...post} />
+        <Post key={post.id} {...post} />
       ))}
     </S.Container>
   )
