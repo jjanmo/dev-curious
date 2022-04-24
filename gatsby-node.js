@@ -4,7 +4,6 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Import Post Template Component
   const PostTemplateComponent = path.resolve('./src/templates/post_template.tsx')
 
   // Get All Markdown File For Paging
@@ -32,23 +31,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Page Generating Function
-  const generatePostPage = ({
-    node: {
-      fields: { slug },
-    },
-  }) => {
-    console.log('🙏', slug)
+  // const generatePostPage = ({
+  //   node: {
+  //     fields: { slug },
+  //   },
+  // }) => {
+  //   const pageOptions = {
+  //     path: `post${slug}`,
+  //     component: PostTemplateComponent,
+  //     context: { slug },
+  //   }
+
+  //   createPage(pageOptions)
+  // }
+
+  // Generate Post Page And Passing Slug Props for Query
+  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(post => {
+    const {
+      node: {
+        fields: { slug },
+      },
+    } = post
+
     const pageOptions = {
       path: `post${slug}`,
       component: PostTemplateComponent,
       context: { slug },
     }
-
     createPage(pageOptions)
-  }
-
-  // Generate Post Page And Passing Slug Props for Query
-  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage)
+  })
 }
 
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
