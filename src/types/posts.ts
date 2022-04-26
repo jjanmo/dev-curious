@@ -3,6 +3,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image'
 export interface RawPostType {
   node: {
     id: string
+    html: string
     fields: {
       slug: string
     }

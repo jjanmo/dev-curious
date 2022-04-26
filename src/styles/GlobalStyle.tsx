@@ -4,7 +4,7 @@ const globalStyles = css`
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
   :root {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   * {

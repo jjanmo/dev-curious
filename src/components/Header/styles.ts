@@ -7,7 +7,7 @@ export const Container = styled.header<{ isScrolling: boolean }>`
   left: 0;
 
   width: 100%;
-  height: ${({ isScrolling }) => (isScrolling ? '7.5rem' : '5rem')};
+  height: ${({ isScrolling }) => (isScrolling ? '10rem' : '6rem')};
 
   background-color: ${COLORS.PURPLE_01};
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -21,23 +21,23 @@ export const Container = styled.header<{ isScrolling: boolean }>`
 `
 export const Logo = styled.div<{ isScrolling: boolean }>`
   display: flex;
-  font-weight: bold;
+  font-weight: 700;
   position: relative;
   margin: 0 10rem;
 
   & > div:first-of-type {
     position: absolute;
-    top: ${({ isScrolling }) => (isScrolling ? '50px' : '0px')};
-    left: -40px;
+    top: ${({ isScrolling }) => (isScrolling ? '4.5rem' : '0')};
+    left: -30px;
     color: ${COLORS.YELLOW_01};
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: ${({ isScrolling }) => (isScrolling ? '3rem' : '2rem')};
     transition: all 0.4s ease-in-out;
   }
   & > div:last-of-type {
     color: ${COLORS.YELLOW_02};
     font-family: 'Hubballi', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   & > div {
     position: relative;
