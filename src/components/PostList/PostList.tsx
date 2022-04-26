@@ -1,5 +1,5 @@
 import Post from './PostList.Item'
-import * as S from './styles.list'
+import * as S from './PostList.style'
 import { PostsSortingContext } from 'contexts/PostsSortingContext'
 import React, { useContext } from 'react'
 import { PostType } from 'types/posts'

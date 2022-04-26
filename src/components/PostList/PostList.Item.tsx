@@ -1,4 +1,4 @@
-import * as S from './styles.item'
+import * as S from './PostList.Item.style'
 import { Link } from 'gatsby'
 import React from 'react'
 import { PostType } from 'types/posts'

@@ -1,5 +1,5 @@
 import CategoryItem from './Category.Item'
-import * as S from './styles.list'
+import * as S from './Category.List.style'
 import { PostsSortingContext } from 'contexts/PostsSortingContext'
 import { useContext } from 'react'
 

@@ -1,4 +1,4 @@
-import * as S from './styles.item'
+import * as S from './Category.Item.style'
 import { Link } from 'gatsby'
 import React from 'react'
 
