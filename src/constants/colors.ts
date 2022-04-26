@@ -6,6 +6,7 @@ export enum COLORS {
   YELLOW_01 = '#ffd32a',
   YELLOW_02 = '#ffa801',
   GREY_01 = '#808e9b',
+  GREY_02 = '#bdc3c7',
   WHITE = '#fff',
   BLACK = '#000',
 }

@@ -1,12 +1,27 @@
+import { LayoutDesktop } from 'components/Layout'
+import Post from 'components/Post'
 import { graphql } from 'gatsby'
 import React from 'react'
+import { RawPostType } from 'types/posts'
 
-// interface PostTemplateProps {}
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges: RawPostType[]
+    }
+  }
+}
 
-const PostTemplate = (props: unknown) => {
-  console.log('😡', props)
+const PostTemplate = ({ data }: Props) => {
+  console.log(data)
 
-  return <div>Post Template</div>
+  const post = data.allMarkdownRemark.edges[0]
+
+  return (
+    <LayoutDesktop>
+      <Post {...post} />
+    </LayoutDesktop>
+  )
 }
 
 export default PostTemplate
@@ -16,6 +31,7 @@ export const queryMarkdownDataBySlug = graphql`
     allMarkdownRemark(filter: { fields: { slug: { eq: $slug } } }) {
       edges {
         node {
+          id
           html
           frontmatter {
             title

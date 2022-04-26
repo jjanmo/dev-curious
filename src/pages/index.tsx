@@ -1,17 +1,10 @@
 import styled from '@emotion/styled'
-import CategoryList from 'components/CategoryList'
-import Header from 'components/Header'
+import CategoryList from 'components/Category'
+import { LayoutDesktop } from 'components/Layout'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
-import { useQueryPosts } from 'hooks'
-import queryString, { ParsedQuery } from 'query-string'
-import React, { useContext, useMemo, useState } from 'react'
-import GlobalStyles from 'styles/GlobalStyle'
-import { PostType } from 'types/posts'
+import React from 'react'
 
-const Container = styled.div`
-  min-height: 100vh;
-`
 const Main = styled.div`
   width: 100%;
   max-width: 65rem;
@@ -30,16 +23,14 @@ interface Props {
 
 const Home = ({ location: { search } }: Props) => {
   return (
-    <Container>
-      <GlobalStyles />
-      <Header />
+    <LayoutDesktop>
       <PostsSortingContextProvider search={search}>
         <Main>
           <CategoryList />
           <PostList />
         </Main>
       </PostsSortingContextProvider>
-    </Container>
+    </LayoutDesktop>
   )
 }
 
