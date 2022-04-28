@@ -1,39 +1,17 @@
-import { Container, Logo } from './styles'
+import * as S from './Header.style'
 import Nav from 'components/Nav'
 import SearchForm from 'components/SearchForm'
 import { Link } from 'gatsby'
-import { useEffect, useState } from 'react'
 
 const Header = () => {
-  const [isScrolling, setIsScrolling] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const handleScroll = () => {
-    const posY = window.scrollY
-    if (posY === 0) setIsScrolling(false)
-    else setIsScrolling(true)
-  }
-
   return (
-    <Container isScrolling={isScrolling}>
+    <S.Container>
       <Link to="/">
-        <Logo isScrolling={isScrolling}>
-          <div>DEV</div>
-          <div>Curious</div>
-        </Logo>
+        <S.Logo>Curious Note</S.Logo>
       </Link>
       <Nav />
-      <SearchForm />
-      <div>
-        <input type="radio" />
-        <input type="radio" />
-      </div>
-    </Container>
+      {/* <SearchForm /> */}
+    </S.Container>
   )
 }
 
