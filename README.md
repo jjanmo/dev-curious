@@ -1,8 +1,6 @@
-# Dev Curious Note
+# Curious Note
 
-This repo is a so-called `Dev-Curious-Paradise`.
-
-I made a blog to summerize and share questions about programming using [Gatsby](https://www.gatsbyjs.com/).
+I made a blog to summerize and share questions about programming + ɑ using [Gatsby](https://www.gatsbyjs.com/).
 
 It will be filled with extremely personal curiosity, so it may be useless to someone.
 
