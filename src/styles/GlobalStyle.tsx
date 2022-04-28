@@ -1,7 +1,8 @@
 import { Global, css } from '@emotion/react'
+import { COLORS } from 'constants/colors'
 
 const globalStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
   :root {
     font-size: 10px;
@@ -13,8 +14,8 @@ const globalStyles = css`
     box-sizing: border-box;
   }
   body {
-    background-color: #f5f5f5;
-    font-family: 'Nanum Gothic', sans-serif;
+    background-color: ${COLORS.GRAY_010};
+    font-family: 'IBM Plex Sans', sans-serif;
   }
 
   a {
