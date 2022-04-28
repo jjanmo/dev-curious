@@ -1,6 +1,4 @@
 import * as S from './Header.style'
-import Nav from 'components/Nav'
-import SearchForm from 'components/SearchForm'
 import { Link } from 'gatsby'
 
 const Header = () => {
@@ -9,8 +7,17 @@ const Header = () => {
       <Link to="/">
         <S.Logo>Curious Note</S.Logo>
       </Link>
-      <Nav />
-      {/* <SearchForm /> */}
+      <S.Navigation>
+        <S.Item>
+          <Link to="/">Dev</Link>
+        </S.Item>
+        <S.Item>
+          <Link to="/life">Life</Link>
+        </S.Item>
+        <S.Item>
+          <Link to="/about">About</Link>
+        </S.Item>
+      </S.Navigation>
     </S.Container>
   )
 }

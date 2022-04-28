@@ -5,7 +5,7 @@ module.exports = {
     title: `Dev Curious Note`,
     description: `This is just blog about sharing questions about programming 💻`,
     author: `@jjanmo`,
-    siteUrl: `https://devcrs.tk`,
+    siteUrl: `https://curious-note.vercel.app/`,
   },
   plugins: [
     {

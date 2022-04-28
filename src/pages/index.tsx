@@ -1,19 +1,18 @@
 import styled from '@emotion/styled'
 import CategoryList from 'components/Category'
-import { LayoutDesktop } from 'components/Layout'
+import Layout from 'components/Layout'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
 import React from 'react'
 
 const Main = styled.div`
   width: 100%;
-  max-width: 65rem;
-  min-height: 100vh;
-
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  max-width: 90rem;
+  /* min-height: 100vh; */
   padding-top: 5rem;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 `
 interface Props {
   location: {
@@ -23,14 +22,14 @@ interface Props {
 
 const Home = ({ location: { search } }: Props) => {
   return (
-    <LayoutDesktop>
+    <Layout>
       <PostsSortingContextProvider search={search}>
         <Main>
           <CategoryList />
           <PostList />
         </Main>
       </PostsSortingContextProvider>
-    </LayoutDesktop>
+    </Layout>
   )
 }
 

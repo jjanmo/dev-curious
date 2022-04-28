@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './Layout.style'
 import Header from 'components/Header'
 import React from 'react'
 import GlobalStyles from 'styles/GlobalStyle'
@@ -7,14 +7,14 @@ interface Props {
   children: React.ReactNode
 }
 
-function LayoutDesktop({ children }: Props) {
+function Layout({ children }: Props) {
   return (
-    <S.DesktopContainer>
+    <S.Container>
       <GlobalStyles />
       <Header />
       {children}
-    </S.DesktopContainer>
+    </S.Container>
   )
 }
 
-export default LayoutDesktop
+export default Layout
