@@ -1,5 +1,7 @@
 # Curious Note
 
+> Here is [My Curious Note](https://curious-note.vercel.app/) 🚀
+
 I made a blog to summerize and share questions about programming + ɑ using [Gatsby](https://www.gatsbyjs.com/).
 
 It will be filled with extremely personal curiosity, so it may be useless to someone.
