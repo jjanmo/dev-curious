@@ -3,14 +3,13 @@ import styled from '@emotion/styled'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 export const Wrapper = styled.div`
-  max-width: 90rem;
+  max-width: 80rem;
   width: 100%;
   min-height: calc(100vh - 8rem);
   margin: 2rem auto;
 
   background-color: ${COLORS.WHITE};
   border-radius: 10px;
-  border: 1px solid ${COLORS.GREY_02};
   overflow: hidden;
 `
 export const Cover = styled(GatsbyImage)`
