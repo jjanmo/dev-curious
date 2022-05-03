@@ -1,7 +1,8 @@
 export enum COLORS {
-  GRAY_010 = '#efeeee',
-  GRAY_020 = '#696969', // dimgray
-  RED_010 = '#ff4500',
+  GRAY_010 = '#F0F0F3',
+
+  GRAY_030 = '#373F57',
+
   WHITE = '#fff',
   BLACK = '#000',
 

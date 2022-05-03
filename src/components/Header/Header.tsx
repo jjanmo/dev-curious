@@ -4,18 +4,16 @@ import { Link } from 'gatsby'
 const Header = () => {
   return (
     <S.Container>
-      <Link to="/">
-        <S.Logo>Curious Note</S.Logo>
-      </Link>
+      <S.Logo>Curious Note</S.Logo>
       <S.Navigation>
         <S.Item>
-          <Link to="/">Dev</Link>
+          <Link to="/">posts</Link>
         </S.Item>
         <S.Item>
-          <Link to="/life">Life</Link>
+          <Link to="/tags">tags</Link>
         </S.Item>
         <S.Item>
-          <Link to="/about">About</Link>
+          <Link to="/about">about</Link>
         </S.Item>
       </S.Navigation>
     </S.Container>
