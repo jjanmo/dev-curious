@@ -1,7 +1,8 @@
 export enum COLORS {
-  GRAY_010 = '#F0F0F3',
-
+  GRAY_010 = '#F0F0F3', // background
+  GRAY_020 = '#6a728b',
   GRAY_030 = '#373F57',
+  GRAY_040 = '#222', // text-color
 
   WHITE = '#fff',
   BLACK = '#000',

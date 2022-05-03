@@ -5,15 +5,6 @@ import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
 import React from 'react'
 
-const Main = styled.div`
-  width: 100%;
-  max-width: 90rem;
-  /* min-height: 100vh; */
-  padding-top: 5rem;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-`
 interface Props {
   location: {
     search: string
@@ -22,15 +13,21 @@ interface Props {
 
 const Home = ({ location: { search } }: Props) => {
   return (
-    <Layout>
-      <PostsSortingContextProvider search={search}>
+    <PostsSortingContextProvider search={search}>
+      <Layout>
         <Main>
-          <CategoryList />
           <PostList />
         </Main>
-      </PostsSortingContextProvider>
-    </Layout>
+      </Layout>
+    </PostsSortingContextProvider>
   )
 }
 
 export default Home
+
+const Main = styled.main`
+  min-width: 40rem;
+  max-width: 80rem;
+  width: 100%;
+  margin: auto;
+`

@@ -17,15 +17,15 @@ const PostListItem = ({
   return (
     <Link to={`/post${slug}`}>
       <S.Container>
-        <S.Thumbnail image={gatsbyImageData} alt="thumbnail image" />
+        {/* <S.Thumbnail image={gatsbyImageData} alt="thumbnail image" /> */}
         <S.Title>{title}</S.Title>
         <S.Date>{date}</S.Date>
-        <S.CategoryWrapper>
+        {/* <S.CategoryWrapper>
           {categories?.map((category, index) => (
             <div key={index}>{category.toUpperCase()}</div>
           ))}
-        </S.CategoryWrapper>
-        <S.Overview>{`${summary?.slice(0, 150)}...`}</S.Overview>
+        </S.CategoryWrapper> */}
+        <S.Overview>{`${summary?.slice(0, 200)}...`}</S.Overview>
       </S.Container>
     </Link>
   )
