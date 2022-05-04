@@ -2,8 +2,6 @@ import { Global, css } from '@emotion/react'
 import { COLORS } from 'constants/colors'
 
 const globalStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
-
   :root {
     font-size: 10px;
   }
@@ -15,7 +13,7 @@ const globalStyles = css`
   }
   body {
     background-color: ${COLORS.GRAY_010};
-    font-family: 'IBM Plex Sans', sans-serif;
+    color: ${COLORS.GRAY_040};
   }
 
   a {
