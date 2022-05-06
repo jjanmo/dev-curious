@@ -1,4 +1,4 @@
-import { LayoutDesktop } from 'components/Layout'
+import Layout from 'components/Layout'
 import Post from 'components/Post'
 import { graphql } from 'gatsby'
 import React from 'react'
@@ -13,14 +13,12 @@ interface Props {
 }
 
 const PostTemplate = ({ data }: Props) => {
-  console.log(data)
-
   const post = data.allMarkdownRemark.edges[0]
 
   return (
-    <LayoutDesktop>
+    <Layout>
       <Post {...post} />
-    </LayoutDesktop>
+    </Layout>
   )
 }
 
