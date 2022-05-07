@@ -8,22 +8,21 @@ export const Container = styled.header`
   width: 100%;
   height: 8rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   box-shadow: 10px 10px 12px 0 rgba(0, 0, 0, 0.07);
   background-color: ${COLORS.GRAY_010};
 `
 export const Logo = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 5rem;
-  transform: translateY(-50%);
+  flex: 1;
+  max-width: 25rem;
+  padding-left: 5rem;
   font-weight: bold;
   font-size: 3rem;
 `
 export const Navigation = styled.ul`
+  flex: 2;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   list-style: none;
 `
@@ -49,3 +48,5 @@ export const Item = styled.li`
     color: ${COLORS.GRAY_020};
   }
 `
+
+export const Weather = styled.div``
