@@ -1,15 +1,11 @@
 // import useSWR from "swr"
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import useSWR, { Fetcher } from 'swr'
-import { WeatherType } from 'types/weather'
+import useSWR from 'swr'
 
 interface LocationType {
   latitude: number
   longitude: number
-}
-interface WeatherResponseType {
-  data: WeatherType
 }
 
 function useFetchWeather<T>() {
