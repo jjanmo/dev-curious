@@ -30,7 +30,7 @@ function useFetchWeather<T>() {
       const {
         coords: { latitude, longitude },
       } = position
-      console.log(latitude, longitude)
+
       setLocation({
         latitude,
         longitude,
