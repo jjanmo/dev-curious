@@ -12,7 +12,7 @@ const globalStyles = css`
     box-sizing: border-box;
   }
   body {
-    background-color: ${COLORS.GRAY_010};
+    background-color: ${COLORS.WHITE};
     color: ${COLORS.GRAY_040};
   }
 
