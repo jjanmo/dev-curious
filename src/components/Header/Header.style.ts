@@ -4,8 +4,9 @@ import { Link } from 'gatsby'
 
 export const Container = styled.header`
   width: 100%;
+  max-width: 102.4rem;
   height: 8rem;
-  padding: 0 18rem;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,13 +29,13 @@ export const ButtonsContainer = styled.div`
   align-items: center;
 `
 export const SearchLink = styled(Link)`
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   margin: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 1rem;
 
   &:hover {
     background-color: ${COLORS.GRAY_010};
