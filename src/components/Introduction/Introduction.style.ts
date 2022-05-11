@@ -32,7 +32,12 @@ export const MyMotto = styled.div`
   font-size: 2rem;
 `
 export const Links = styled.div`
+  padding: 1rem 4rem;
   border-top: 1px solid ${COLORS.GRAY_010};
   width: 100%;
   height: 4rem;
+
+  & svg {
+    margin-right: 2rem;
+  }
 `
