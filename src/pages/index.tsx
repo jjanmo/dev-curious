@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import CategoryList from 'components/Category'
+import Introduction from 'components/Introduction'
 import Layout from 'components/Layout'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
@@ -16,6 +17,7 @@ const Home = ({ location: { search } }: Props) => {
     <PostsSortingContextProvider search={search}>
       <Layout>
         <Main>
+          <Introduction />
           <PostList />
         </Main>
       </Layout>
