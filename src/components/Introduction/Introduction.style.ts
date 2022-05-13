@@ -1,3 +1,4 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { COLORS } from 'constants/colors'
 
@@ -31,13 +32,46 @@ export const MyMotto = styled.div`
   color: ${COLORS.GRAY_030};
   font-size: 2rem;
 `
-export const Links = styled.div`
+export const ButtonContainer = styled.div`
   padding: 1rem 4rem;
   border-top: 1px solid ${COLORS.GRAY_010};
   width: 100%;
-  height: 4rem;
+  display: flex;
+  align-items: center;
+`
+export const MailText = styled.span<{ active: boolean }>`
+  width: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  opacity: 0.9;
+  color: ${COLORS.WHITE};
+  background-color: ${COLORS.GRAY_050};
+  transition: all 0.3s ease-in-out;
 
-  & svg {
-    margin-right: 2rem;
+  ${({ active }) =>
+    active &&
+    css`
+      width: 16rem;
+      padding: 0.8rem 1rem;
+    `}
+`
+export const ClipboardWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+  .clipboard-button {
+    all: unset;
   }
+`
+export const Copied = styled.span<{ active: boolean }>`
+  position: absolute;
+  bottom: -3rem;
+  left: 0rem;
+  display: ${({ active }) => (active ? 'inline-block' : 'none')};
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: ${COLORS.WHITE};
+  background-color: ${COLORS.GRAY_050};
+  opacity: 0.8;
+  font-size: 1.4rem;
 `

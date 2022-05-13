@@ -3,10 +3,11 @@ import { Email, Github } from 'components/Icons'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
+import Clipboard from 'react-clipboard.js'
 
 function Introduction() {
   const [isHover, setIsHover] = useState({ github: false, mail: false })
-
+  const [isCopied, setIsCopied] = useState(false)
   const handleMouseOver = (e: React.MouseEvent) => {
     const target = e.currentTarget.id
     setIsHover({
@@ -39,25 +40,29 @@ function Introduction() {
         </S.MyInfo>
       </S.Container>
 
-      <S.Links>
+      <S.ButtonContainer>
         <Link
           id="github"
-          to={'https://github.com/jjanmo'}
+          to="https://github.com/jjanmo"
           target="_blank"
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
           <Github size={32} isHover={isHover.github} />
         </Link>
-        <Link
-          id="mail"
-          to="mailto:jjanmo07@hanmail.net"
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          <Email width={52} height={38} isHover={isHover.mail} />
-        </Link>
-      </S.Links>
+        <S.ClipboardWrapper id="mail" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          <Clipboard
+            className="clipboard-button"
+            data-clipboard-text="jjanmo07@hanmail.net"
+            button-title="Copy to Clipboard"
+            onSuccess={() => setIsCopied(true)}
+          >
+            <Email width={52} height={38} isHover={isHover.mail} />
+          </Clipboard>
+          <S.Copied active={isCopied}>Copied!</S.Copied>
+        </S.ClipboardWrapper>
+        <S.MailText active={isHover.mail}>jjanmo07@hanmail.net</S.MailText>
+      </S.ButtonContainer>
     </S.Introduction>
   )
 }
