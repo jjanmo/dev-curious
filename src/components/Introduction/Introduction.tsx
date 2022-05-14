@@ -2,7 +2,7 @@ import * as S from './Introduction.style'
 import { Email, Github } from 'components/Icons'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Clipboard from 'react-clipboard.js'
 
 function Introduction() {
@@ -22,6 +22,14 @@ function Introduction() {
       [target]: false,
     })
   }
+
+  useEffect(() => {
+    if (isCopied) {
+      setTimeout(() => {
+        setIsCopied(false)
+      }, 1000)
+    }
+  }, [isCopied])
 
   return (
     <S.Introduction>
