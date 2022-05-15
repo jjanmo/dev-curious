@@ -24,13 +24,14 @@ export const MyInfo = styled.div`
   justify-content: center;
 `
 export const MyName = styled.div`
+  margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: bold;
-  line-height: 1.5;
 `
 export const MyMotto = styled.div`
   color: ${COLORS.GRAY_030};
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 `
 export const ButtonContainer = styled.div`
   padding: 1rem 4rem;

@@ -44,7 +44,11 @@ function Introduction() {
         </S.ImageWrapper>
         <S.MyInfo>
           <S.MyName>JJanmo</S.MyName>
-          <S.MyMotto>눈길을 걸어갈 때 어지럽게 걷지 말기를.</S.MyMotto>
+          <S.MyMotto>
+            눈길을 걸어갈 때 어지럽게 걷지 말기를.
+            <br />
+            오늘 내가 걸어간 길이 훗날 다른 사람의 이정표가 되리니.
+          </S.MyMotto>
         </S.MyInfo>
       </S.Container>
 
