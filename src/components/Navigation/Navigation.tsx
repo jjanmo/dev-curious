@@ -2,22 +2,18 @@ import * as S from './Navigation.style'
 import { Link } from 'gatsby'
 import type { PageProps } from 'gatsby'
 
-function Navigation(props: PageProps) {
-  const { pageResources } = props
-
-  console.log(props.path)
-
+function Navigation() {
   return (
     <S.Container>
-      {/* <S.Item current={path === '/'}>
+      <S.Item>
         <Link to="/">글</Link>
       </S.Item>
-      <S.Item current={path === '/series'}>
+      <S.Item>
         <Link to="/series">시리즈</Link>
       </S.Item>
-      <S.Item current={path === '/about'}>
+      <S.Item>
         <Link to="/about">소개</Link>
-      </S.Item> */}
+      </S.Item>
     </S.Container>
   )
 }

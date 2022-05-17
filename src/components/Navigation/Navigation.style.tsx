@@ -10,7 +10,7 @@ export const Container = styled.ul`
   max-width: 76.8rem;
   margin: 5rem auto;
 `
-export const Item = styled.li<{ current: boolean }>`
+export const Item = styled.li<{ current?: boolean }>`
   width: 15rem;
   padding: 1rem 1.5rem;
   transition: all 0.4s ease-in-out;

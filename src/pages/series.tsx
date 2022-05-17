@@ -1,5 +1,11 @@
+import Layout from 'components/Layout'
+
 function Series() {
-  return <div>시리즈 페이지</div>
+  return (
+    <Layout>
+      <div>시리즈 페이지</div>
+    </Layout>
+  )
 }
 
 export default Series

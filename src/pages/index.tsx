@@ -1,8 +1,5 @@
 import styled from '@emotion/styled'
-import CategoryList from 'components/Category'
-import Introduction from 'components/Introduction'
 import Layout from 'components/Layout'
-import Navigation from 'components/Navigation'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
 import React from 'react'

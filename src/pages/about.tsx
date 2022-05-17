@@ -1,3 +1,4 @@
+import Layout from 'components/Layout'
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 
@@ -22,7 +23,7 @@ const About = ({
   },
 }: Props) => {
   return (
-    <>
+    <Layout>
       <div>This is About page</div>
       <section>
         <div>{title}</div>
@@ -31,7 +32,7 @@ const About = ({
       </section>
 
       <Link to={`${process.env.NODE_ENV === 'development' ? '/' : siteUrl}`}>To Home</Link>
-    </>
+    </Layout>
   )
 }
 
