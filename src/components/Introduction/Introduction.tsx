@@ -1,5 +1,6 @@
 import * as S from './Introduction.style'
 import { Email, Github } from 'components/Icons'
+import LottieIcon from 'components/LottieIcon'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useEffect, useState } from 'react'
@@ -34,14 +35,10 @@ function Introduction() {
   return (
     <S.Introduction>
       <S.Container>
-        <S.ImageWrapper>
-          <StaticImage
-            width={128}
-            height={128}
-            src="../../assets/default_avatar.png"
-            alt="avatar"
-          />
-        </S.ImageWrapper>
+        <S.IconWrapper>
+          <LottieIcon type="yoga" />
+        </S.IconWrapper>
+
         <S.MyInfo>
           <S.MyName>JJanmo</S.MyName>
           <S.MyMotto>

@@ -15,8 +15,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
 `
-export const ImageWrapper = styled.div`
-  padding: 4rem;
+export const IconWrapper = styled.div`
+  width: 15rem;
+  height: 15rem;
+  margin-right: 5rem;
 `
 export const MyInfo = styled.div`
   display: flex;
