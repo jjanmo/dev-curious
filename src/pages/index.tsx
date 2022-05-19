@@ -1,4 +1,4 @@
-import * as CS from './common.style'
+import * as CS from '../styles/common'
 import Layout from 'components/Layout'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'

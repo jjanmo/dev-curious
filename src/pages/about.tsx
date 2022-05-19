@@ -1,4 +1,4 @@
-import * as CS from './common.style'
+import * as CS from '../styles/common'
 import styled from '@emotion/styled'
 import Layout from 'components/Layout'
 import { COLORS } from 'constants/colors'
