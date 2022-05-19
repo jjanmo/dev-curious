@@ -1,22 +1,21 @@
 import * as S from './Header.style'
-import { Magnifier } from 'components/Icons'
+import { Logo } from 'components/Icons'
 import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 
 const Header = () => {
   return (
     <S.Container>
       <S.Logo>
         <Link to="/">
-          <StaticImage width={50} height={50} src="../../assets/logo.png" alt="logo" />
+          <Logo width={2000} height={2000} />
         </Link>
         <S.LogoText>curious.note</S.LogoText>
       </S.Logo>
       <S.ButtonsContainer>
         <div>다크모드 버튼</div>
-        <S.SearchLink to="/search">
+        {/* <S.SearchLink to="/search">
           <Magnifier size={25} />
-        </S.SearchLink>
+        </S.SearchLink> */}
       </S.ButtonsContainer>
     </S.Container>
   )
