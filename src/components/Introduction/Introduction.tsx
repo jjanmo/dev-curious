@@ -32,21 +32,25 @@ function Introduction() {
     }
   }, [isCopied])
 
+  // lottie  + music list 로 변경하자
+  // 요가 / 재즈(색소폰) / EDM / 팝송
+  // Promessess Dimmi
+  // Klanga Gostan
+  // Superman Joe Brooks
+  // Hall Of Frame The Script
+  // Blue Eiffle65
+  // 하늘의 달리다 이적
+  // 괜찮아 떠나 스윗소로우
+  // 날아 이승렬
+  // We are one kelly sweet
+
   return (
     <S.Introduction>
       <S.Container>
         <S.IconWrapper>
           <LottieIcon type="yoga" />
         </S.IconWrapper>
-
-        <S.MyInfo>
-          <S.MyName>JJanmo</S.MyName>
-          <S.MyMotto>
-            눈길을 걸어갈 때 어지럽게 걷지 말기를.
-            <br />
-            오늘 내가 걸어간 길이 훗날 다른 사람의 이정표가 되리니.
-          </S.MyMotto>
-        </S.MyInfo>
+        Lottie Music PlayListSwiper
       </S.Container>
 
       <S.ButtonContainer>
