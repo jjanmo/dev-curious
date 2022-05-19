@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import * as CS from './common.style'
 import Layout from 'components/Layout'
 import PostList from 'components/PostList'
 import { PostsSortingContextProvider } from 'contexts/PostsSortingContext'
@@ -14,19 +14,12 @@ const Home = ({ location: { search } }: Props) => {
   return (
     <PostsSortingContextProvider search={search}>
       <Layout>
-        <Main>
+        <CS.Main>
           <PostList />
-        </Main>
+        </CS.Main>
       </Layout>
     </PostsSortingContextProvider>
   )
 }
 
 export default Home
-
-const Main = styled.main`
-  min-width: 40rem;
-  max-width: 76.8rem;
-  width: 100%;
-  margin: auto;
-`
