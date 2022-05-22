@@ -1,9 +1,10 @@
+import MusicSwiperItem from './MusicSwiper.Item'
 import * as S from './MusicSwiper.style'
+import { PlayList } from './musicData'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 function MusicSwiper() {
@@ -18,10 +19,11 @@ function MusicSwiper() {
           pagination={{ clickable: true }}
           onSwiper={swiper => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          threshold={10}
         >
-          {[1, 2, 3, 4, 5, 6].map(item => (
-            <SwiperSlide>
-              <S.Item key={item}>{item}</S.Item>
+          {PlayList.map((data, index) => (
+            <SwiperSlide key={index}>
+              <MusicSwiperItem {...data} />
             </SwiperSlide>
           ))}
         </Swiper>

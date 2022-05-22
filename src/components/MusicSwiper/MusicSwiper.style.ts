@@ -31,13 +31,19 @@ export const Container = styled.div`
   .swiper-pagination {
   }
 `
-export const Item = styled.div`
+export const ItemContainer = styled.div`
   width: 18rem;
   height: 15rem;
-  background-color: ${COLORS.GRAY_020};
   border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  background-color: ${COLORS.GRAY_010};
+`
+export const Title = styled.div`
+  font-size: 2rem;
+`
+export const Singer = styled.div`
+  font-size: 1.5rem;
 `

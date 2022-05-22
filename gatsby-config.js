@@ -30,7 +30,6 @@ module.exports = {
         path: `${__dirname}/contents`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
