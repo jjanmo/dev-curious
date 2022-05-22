@@ -8,10 +8,12 @@ interface Props {
 }
 
 function MusicSwiperItem({ title, singer, url }: Props) {
-  const [audio] = useState(new Audio(url))
+  const [audio] = useState(typeof Audio !== 'undefined' && new Audio(url))
   const [playing, setPlaying] = useState(false)
 
   const toggle = () => setPlaying(!playing)
+
+  if (!audio) return null
 
   useEffect(() => {
     playing ? void audio.play() : void audio.pause()
@@ -34,3 +36,13 @@ function MusicSwiperItem({ title, singer, url }: Props) {
 }
 
 export default MusicSwiperItem
+
+//overlay controller
+/**
+ * 1) 상태 관리 : 플레이 멈춤 완전멈춤
+ * 2) 볼륨 조절
+ * 3) 위치 조정
+ * 4)
+ * 5) 새로고침시 이전 플레이위치 재생하기
+ * 6)
+ */
