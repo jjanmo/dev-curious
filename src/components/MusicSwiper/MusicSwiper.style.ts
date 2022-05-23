@@ -32,6 +32,7 @@ export const Container = styled.div`
   }
 `
 export const ItemContainer = styled.div`
+  position: relative;
   width: 18rem;
   height: 15rem;
   border-radius: 1rem;
@@ -39,7 +40,8 @@ export const ItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${COLORS.GRAY_010};
+  color: ${COLORS.WHITE};
+  background-color: ${COLORS.GRAY_030};
 `
 export const Title = styled.div`
   font-size: 2rem;
