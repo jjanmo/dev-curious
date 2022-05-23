@@ -42,6 +42,7 @@ export const ItemContainer = styled.div`
   align-items: center;
   color: ${COLORS.WHITE};
   background-color: ${COLORS.GRAY_030};
+  overflow: hidden;
 `
 export const Title = styled.div`
   font-size: 2rem;
