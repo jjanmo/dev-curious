@@ -1,6 +1,6 @@
+import { PlayList } from './MusicData'
 import MusicSwiperItem from './MusicSwiper.Item'
 import * as S from './MusicSwiper.style'
-import { PlayList } from './musicData'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
