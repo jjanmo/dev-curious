@@ -1,3 +1,4 @@
+import { Contents } from './Post.Contents.style'
 import * as S from './Post.style'
 import { RawPostType } from 'types/posts'
 
@@ -12,26 +13,27 @@ function Post(props: RawPostType) {
         date,
         categories,
         thumbnail: {
-          childImageSharp: { gatsbyImageData },
+          childImageSharp: { gatsbyImageData: thumbnail },
         },
       },
     },
   } = props
+  console.log(title, categories)
 
   return (
     <S.Wrapper>
-      <S.Cover image={gatsbyImageData} alt="thumbnail image" />
       <S.HeaderSection>
         <S.Title>{title}</S.Title>
         <S.Date>{date}</S.Date>
         <S.CategoryContainer>
           {categories.map((item, index) => (
-            <li key={index}>{`#${item}`}</li>
+            <li key={index}>{item}</li>
           ))}
         </S.CategoryContainer>
       </S.HeaderSection>
+      {thumbnail && <S.Cover image={thumbnail} alt="thumbnail image" />}
       <S.MainSection>
-        <S.Contents dangerouslySetInnerHTML={{ __html: html }} />
+        <Contents dangerouslySetInnerHTML={{ __html: html }} />
       </S.MainSection>
     </S.Wrapper>
   )

@@ -1,6 +1,5 @@
 import * as S from './Layout.style'
 import Header from 'components/Header'
-import MusicSwiper from 'components/MusicSwiper'
 import Navigation from 'components/Navigation'
 import React from 'react'
 import GlobalStyles from 'styles/GlobalStyle'
@@ -14,7 +13,7 @@ function Layout({ children }: Props) {
     <S.Container>
       <GlobalStyles />
       <Header />
-      <MusicSwiper />
+      {/* <MusicSwiper /> */}
       <Navigation />
       {children}
     </S.Container>

@@ -5,11 +5,9 @@ export enum COLORS {
   GRAY_040 = '#222', // text-color
   GRAY_050 = '#797979',
 
-  BLUE_010 = '#7298C8',
-  BLUE_020 = '#012344',
-
   GREEN_010 = '#12B886',
   GREEN_020 = '#20C997',
+  GREEN_030 = '#F7FEFD',
 
   PURPLE_010 = '#3c40c6',
   PURPLE_020 = '#575fcf',
