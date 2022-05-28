@@ -40,15 +40,6 @@ const Header = () => {
         <S.LogoText>curious.note</S.LogoText>
       </S.Logo>
       <S.ButtonsContainer>
-        <Link
-          id="github"
-          to="https://github.com/jjanmo"
-          target="_blank"
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          <Github size={32} isHover={isHover.github} />
-        </Link>
         <S.ClipboardWrapper id="mail" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
           <Clipboard
             className="clipboard-button"
@@ -61,6 +52,15 @@ const Header = () => {
           <S.Copied active={isCopied}>Copied!</S.Copied>
           <S.MailText active={isHover.mail}>jjanmo07@hanmail.net</S.MailText>
         </S.ClipboardWrapper>
+        <a
+          id="github"
+          href="https://github.com/jjanmo"
+          target="_blank"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
+          <Github size={32} isHover={isHover.github} />
+        </a>
       </S.ButtonsContainer>
     </S.Container>
   )
