@@ -1,6 +1,6 @@
 ---
-date: '2022-03-06'
-title: 'Typescript는 왜 이러는 걸까 2탄'
+date: '2022-04-02'
+title: 'Typescript는 왜 이러는걸까 2탄'
 categories: ['typescript', 'type-challenge']
 summary: ''
 thumbnail: '../../src/assets/thumbnail.png'

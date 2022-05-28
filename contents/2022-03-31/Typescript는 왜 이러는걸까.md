@@ -1,7 +1,7 @@
 ---
 date: '2022-03-31'
-title: 'Typescript는 왜 이러는걸까?'
-categories: ['typescript', type-guard', 'type-challenge']
+title: 'Typescript는 왜 이러는걸까'
+categories: ['typescript', 'type-guard', 'type-challenge']
 summary: ''
 thumbnail: '../../src/assets/thumbnail.png'
 ---
