@@ -10,8 +10,6 @@ thumbnail: '../../src/assets/thumbnail.png'
 
 > 아래는 해당 문제의 솔루션이기 때문에 문제를 직접 스스로의 힘으로 풀어보고 싶다면 당장 위 링크로 도망가시길 바랍니다.🙏
 
->
-
 ```ts
 type LookUp<U extends object, T extends string, P = U> = U extends U
   ? [U] extends [P]

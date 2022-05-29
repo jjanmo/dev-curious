@@ -1,3 +1,4 @@
+import Comments from 'components/Comments'
 import Layout from 'components/Layout'
 import Post from 'components/Post'
 import { graphql } from 'gatsby'
@@ -18,6 +19,7 @@ const PostTemplate = ({ data }: Props) => {
   return (
     <Layout>
       <Post {...post} />
+      <Comments />
     </Layout>
   )
 }
