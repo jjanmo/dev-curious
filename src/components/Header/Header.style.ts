@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 
 export const Container = styled.header`
   width: 100%;
-  max-width: 102.4rem;
+  max-width: 76.8rem;
   height: 8rem;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

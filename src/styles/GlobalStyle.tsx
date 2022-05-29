@@ -14,8 +14,8 @@ const globalStyles = css`
   body {
     background-color: ${COLORS.WHITE};
     color: ${COLORS.GRAY_040};
+    margin: 0 auto;
   }
-
   a {
     text-decoration: none;
     color: inherit;
