@@ -82,5 +82,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'curious note',
+        short_name: 'curious note',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: './src/assets/favicon.png',
+      },
+    },
   ],
 }
