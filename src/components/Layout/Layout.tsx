@@ -1,5 +1,6 @@
 import * as S from './Layout.style'
 import Header from 'components/Header'
+import MusicPlayer from 'components/MusicPlayer'
 import Navigation from 'components/Navigation'
 import React from 'react'
 import GlobalStyles from 'styles/GlobalStyle'
@@ -13,6 +14,7 @@ function Layout({ children }: Props) {
     <S.Container>
       <GlobalStyles />
       <Header />
+      <MusicPlayer />
       {/* <MusicSwiper /> */}
       <Navigation />
       {children}
