@@ -5,7 +5,7 @@ interface PauseProps {
   fill?: string
 }
 
-export default function Pause({ size = 50, fill = COLORS.PURPLE_010 }: PauseProps) {
+export default function Pause({ size = 16, fill = COLORS.GRAY_030 }: PauseProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 16 16" fill="none">
       <rect x={3} y={0} width={2.5} height={16} fill={fill} />
