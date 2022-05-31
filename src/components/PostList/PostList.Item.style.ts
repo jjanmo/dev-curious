@@ -4,15 +4,15 @@ import { onLarge } from 'styles/mediaQuery'
 
 export const Container = styled.li`
   width: 100%;
-  max-width: 45rem;
-  margin: 3rem auto;
+  max-width: 60rem;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   list-style: none;
   cursor: pointer;
 
   ${onLarge} {
-    max-width: none;
+    padding: 0 2rem;
   }
 `
 export const Title = styled.h1`

@@ -16,6 +16,7 @@ export const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(-10px); // 로고 미세 이동
 `
 export const LogoText = styled.span`
   padding-bottom: 5px;

@@ -17,10 +17,10 @@ const PostTemplate = ({ data }: Props) => {
   const post = data.allMarkdownRemark.edges[0]
 
   return (
-    <Layout>
+    <>
       <Post {...post} />
       <Comments />
-    </Layout>
+    </>
   )
 }
 
