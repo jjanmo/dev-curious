@@ -1,11 +1,12 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, PageProps, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+export default function Home({ data, location }) {
+  console.log(data)
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -61,8 +62,6 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
-
 /**
  * Head export to define metadata for the page
  *
@@ -71,7 +70,7 @@ export default BlogIndex
 export const Head = () => <Seo title="All posts" />
 
 export const pageQuery = graphql`
-  {
+  query Posts {
     site {
       siteMetadata {
         title
