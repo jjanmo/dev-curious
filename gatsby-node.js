@@ -8,7 +8,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -31,10 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
+    reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors)
     return
   }
 
