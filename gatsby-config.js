@@ -10,13 +10,13 @@
 module.exports = {
   graphqlTypegen: true,
   siteMetadata: {
-    title: `Steadylog`,
+    title: `Dev Interview`,
     author: {
       name: `JJanmo`,
-      summary: ``,
+      summary: `Front Developer`,
     },
-    description: ``,
-    siteUrl: `https://steadylog.gatsbyjs.io/`,
+    description: `기술 면접에서 마주한 질문들을 정리한다.`,
+    siteUrl: `https://dev-interview.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
